@@ -250,7 +250,7 @@ function get20s(array, year){
 }
 
 console.log(get20s(artists, 1900))
-console.log(get20s(artists, 1800))
+// console.log(get20s(artists, 1800))
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -332,20 +332,36 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
-
-    /* Code here */
-
+function getHTML(data){
+  
   }
 
 
 /* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
-
-    /* Code here */
-
+function randomize(array){
+  array.sort( () => Math.random() - 0.5)
+  return array
   }
 
+  // console.log(randomize(artists))
 
  /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+
+ function getArtistsBorn1900s (array) {
+   let subStringOfYears = []
+   let bornIn1900s = []
+   for (let i = 0; i <array.length; i++) {
+    subStringOfYears.push(array[i].years.split(' '))
+  }
+  for (let i = 0; i < subStringOfYears.length; i++) {
+    if ((Math.floor((subStringOfYears[i][0]/100))*100) === 1900) {
+      bornIn1900s.push(array[i].name)
+    }
+    // console.log(subStringOfYears)
+  }
+  return bornIn1900s
+ }
+
+// console.log(getArtistsBorn1900s(artists))
+
