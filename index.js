@@ -238,11 +238,11 @@ function get20s(array, year){
   let yearsSubStrings = []
   let diedIn20s = []
   for (let i = 0; i <array.length; i++) {
-    yearsSubStrings.push(array[i].years.split(' '))
+    yearsSubStrings.push(array[i].years.split(' - '))
   }
   // console.log(yearsSubStrings)
   for (let i = 0; i <yearsSubStrings.length; i++) {
-    if (((Math.floor((yearsSubStrings[i][0])/100)) * 100) === year && ((Math.floor((yearsSubStrings[i][2])/100)) * 100) === year) {
+    if (((Math.floor((yearsSubStrings[i][0])/100)) * 100) === year && ((Math.floor((yearsSubStrings[i][1])/100)) * 100) === year || ((Math.floor((yearsSubStrings[i][0])/100)) * 100) === 2000) {
       diedIn20s.push(array[i].name)
     }
   }
@@ -269,7 +269,6 @@ function removeArtist(array, index) {
 }
 
 removeArtist(artists, 0)
-console.log(artists)
 
 /**
 /* Task 6: Create a function called `addArtist` that can accept an object of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
@@ -349,19 +348,16 @@ function randomize(array){
  /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
 
  function getArtistsBorn1900s (array) {
-   let subStringOfYears = []
-   let bornIn1900s = []
-   for (let i = 0; i <array.length; i++) {
-    subStringOfYears.push(array[i].years.split(' '))
-  }
-  for (let i = 0; i < subStringOfYears.length; i++) {
-    if ((Math.floor((subStringOfYears[i][0]/100))*100) === 1900) {
-      bornIn1900s.push(array[i].name)
-    }
-    // console.log(subStringOfYears)
-  }
-  return bornIn1900s
+  let subStringOfYears = []
+  let bornIn1900s = []
+  for (let i = 0; i <array.length; i++) {
+   subStringOfYears.push(array[i].years.split(' '))
  }
-
-// console.log(getArtistsBorn1900s(artists))
-
+ for (let i = 0; i < subStringOfYears.length; i++) {
+   if ((Math.floor((subStringOfYears[i][0]/100))*100) === 1900) {
+     bornIn1900s.push(array[i].name)
+   }
+   // console.log(subStringOfYears)
+ }
+ return bornIn1900s
+}
