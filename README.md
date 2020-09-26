@@ -23,9 +23,21 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. How would you describe acessibility on the web to someone new to programming?
+
+Acessibility on the web is a measure of how well people from varying backgrounds and devices are able to access your webpage. A webpage with low accessibility might not have a flexible design, making it hard to read for users on mobile devices. Another trait of low accessibility is not having semantic html and alt descriptions in your images which do not help low or no vision users read your web page. Other acessibility traits are also how large your image files can be, which will make your website too long to download for people with poor internet connection.Overall, your website should be available to anyone regardless of disability.
+
 2. Talk about 3 different things you can do to ensure your website is accessible. 
+
+One way is to use semantic HTML to help vision impaired people to navigate your website. Another way is to add alt tags to help low vision or blind users understand your web page. You also should choose your colors carefully to maximally allow colorblind individuals to read it properly. Nowadays, people access the internet from varying devices of different sizes. This means you should make your website accessible across all these devices, especially mobile users, to ensure 
+
 3. How would you explain the concept of a variable to someone new to programming?
+
+A variable is a name given to a piece of information which can be later used for other purposes down the road. Variables are called to work and can also be manipulated. A variable named myName might be assigned to someones name.
+
 4. What is the purpose of using functions in code?
+
+The purpose of using functions in code is to give reusable instructions to the computer to perform tasks that would take us longer to do on our own. Functions are made like a cookie recipe. Once made, the computer can perform all the steps at the call of a function, rather than us making that recipe from scratch again. This allows you to run the code as much as you want.
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
